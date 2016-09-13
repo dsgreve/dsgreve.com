@@ -9,7 +9,8 @@ $content-font-stack : 'Cantarell', sans-serif;
 
 //Color Pallette
 
-$purple : hsla(314, 26%, 16%, 1);
+$dark-purple : hsla(270, 83%, 18%, 1);
+$light-purple : hsla(280, 60%, 35%, 1);
 $sunflower: hsla(50, 83%, 52%, 1);
 $whiskey : hsla(24, 62%, 53%, 1);
 $bouquet : hsla(318, 24%, 63%, 1);
@@ -26,7 +27,9 @@ $black : hsla(0, 0%, 0%, 1);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
-body {
+html,body {
+    height:100%;
+	overflow:hidden;
 	font-family: $content-font-stack;
-	@include linearGradient($purple, $black);
+	@include linearGradient($dark-purple, $light-purple);
 }
