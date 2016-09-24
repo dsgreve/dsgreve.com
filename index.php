@@ -10,6 +10,8 @@
 </head>
 <body>
 	<div class="stars"></div>
-	<h1 class="logo">greve<sup>*</sup></h1>
+	<a href="/" title="Renturn to dsgreve.com hompage" id="logo">
+		<img src="images/dsgreve-logo-sm.png" alt="Dale Greve" />
+	</a>
 </body>
 </html>
