@@ -1,0 +1,53 @@
+img {
+    max-width:100%;
+}
+.lgImage {display:none;}
+#logo{
+    
+}
+.siteLogo {
+    position:absolute;
+    top: 3%;
+    width: 77%;
+    height: auto;
+    z-index: 999;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 550px;
+    }
+
+.siteLogo:empty {
+    left: 50%;
+    -webkit-transform: translate(-50%, -0%);
+    -moz-transform: translate(-50%, -0%);
+    -ms-transform: translate(-50%, -0%);
+    -o-transform: translate(-50%, -0%);
+    transform: translate(-50%, -0%);
+}
+/* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .lgImage {display:block}
+        .smImage {display:none;}
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
