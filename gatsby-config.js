@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://dsgreve.com",
     title: "dsgreve",
   },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "https://dalegreve.com",
+        url: "https://dalegreve.com/graphql",
       },
     },
     "gatsby-plugin-postcss",
