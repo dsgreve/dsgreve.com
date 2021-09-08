@@ -1,7 +1,12 @@
 module.exports = {
-  siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "dalegreve",
+    siteMetadata: {
+    title: "Severus Snape",
+    titleTemplate: "%s · The Real Hero",
+    description:
+      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
+    siteUrl: "https://dsgreve.com", // No trailing slash allowed!
+    image: "/images/icon.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@dsgreve",
   },
   plugins: [
     {
@@ -10,6 +15,7 @@ module.exports = {
         url: "https://dalegreve.com/graphql",
       },
     },
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     {
