@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 export default function Blog ({ data }) {
   return (
     <Layout>
-      <SEO title="blog" />
+      <Seo title="blog" />
       <h1>My wordpress blog</h1>
       <h4>Posts</h4>
       {data.allWpPost.nodes.map(node => (

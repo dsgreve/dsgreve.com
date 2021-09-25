@@ -1,9 +1,40 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import {
+  container,
+  heading,
+  navLinks,
+  navLinkItem,
+  navLinkText
+} from './layout.module.css'
 
-export default function Layout ({ children }) {
+const Layout = ({ pageTitle, children }) => {
   return (
-    <div style={{ margin: `0 auto`, maxWidth: 750, padding: `0 1rem`}}>
-      {children}
+    <div className={container}>
+      <title>{pageTitle}</title>
+      <nav>
+        <ul className={navLinks}>
+          <li className={navLinkItem}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/about">About</Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/help">Help</Link>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h1 className={heading}>{pageTitle}</h1>
+        {children}
+      </main>
+      <footer>Copyright Dale S. Greve | 2021</footer>
     </div>
-  )
+  );
 }
+
+export default Layout
