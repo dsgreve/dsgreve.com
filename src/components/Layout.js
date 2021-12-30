@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import DsgLogo from '../assets/dsg_logo';
 import TransitionLink from "gatsby-plugin-transition-link";
+import { IoGlassesOutline } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
+import { MdOutlineMarkunreadMailbox } from "react-icons/md";
 
 
 const Layout =({ pageTitle, children }) => {
@@ -22,8 +25,8 @@ const Layout =({ pageTitle, children }) => {
         </div>
       </div>
       <title>{pageTitle}</title>
-      <div className="header__wrapper container flex items-center justify-between">
-        <div className="w-20">
+      <div className="header__wrapper container flex pt-6 items-center justify-between">
+        <div className="w-14">
           <DsgLogo />
         </div>
         <nav className="md:flex">
@@ -33,9 +36,9 @@ const Layout =({ pageTitle, children }) => {
               length: 1,
             }}
             entry={{}}
-            className="text-white uppercase hover:text-rajah md:mr-4"
+            className="text-white uppercase text-xl hover:text-rajah md:mr-4 flex items-center"
           >
-            HOME
+            <FaHome className="mr-2" /> HOME
           </TransitionLink>
           <TransitionLink
             to="/about"
@@ -43,10 +46,10 @@ const Layout =({ pageTitle, children }) => {
               length: 1,
             }}
             entry={{}}
-            className="text-white uppercase hover:text-rajah md:mr-4"
+            className="text-white uppercase text-xl hover:text-rajah md:mr-4 flex items-center"
             activeClassName="border-b-2 border-rajah"
           >
-            About
+            <IoGlassesOutline className="mr-2" /> About
           </TransitionLink>
           <TransitionLink
             to="/contact"
@@ -54,10 +57,10 @@ const Layout =({ pageTitle, children }) => {
               length: 1,
             }}
             entry={{}}
-            className="text-white uppercase hover:text-rajah"
-            activeClassName="border-b-2 border-rajah"
+            className="text-white uppercase text-xl hover:text-rajah flex items-center"
+            activeClassName="border-b-2 border-rajah "
           >
-            Contact
+            <MdOutlineMarkunreadMailbox className="mr-2" /> Contact
           </TransitionLink>
         </nav>
       </div>

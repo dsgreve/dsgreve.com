@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Layout from '../components/Layout';
 import TextIntro from "../components/TextIntro";
+import BrowserDsk from "../assets/Browser__desktop";
 import gsap from "gsap";
 
 // markup
@@ -98,9 +99,12 @@ const IndexPage = ({ transitionStatus }) => {
 
   return (
     <Layout>
-      <div className="container">
-        <div className="text-8xl uppercase font-black text-rajah max-w-4xl">
+      <div className="container mt-20 grid grid-cols-2">
+        <div className="text-8xl uppercase font-bold text-rajah max-w-4xl">
           <TextIntro />
+        </div>
+        <div>
+          <BrowserDsk />
         </div>
       </div>
     </Layout>
