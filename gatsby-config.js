@@ -1,12 +1,7 @@
 module.exports = {
-    siteMetadata: {
-    title: "Severus Snape",
-    titleTemplate: "%s · The Real Hero",
-    description:
-      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
-    siteUrl: "https://dsgreve.com", // No trailing slash allowed!
-    image: "/images/icon.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@dsgreve",
+  siteMetadata: {
+    siteUrl: "https://www.yourdomain.tld",
+    title: "dsgreve",
   },
   plugins: [
     {
@@ -15,16 +10,17 @@ module.exports = {
         url: "https://dalegreve.com/graphql",
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
-    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-12185789-10",
+        trackingId: "278437889",
       },
     },
+    "gatsby-plugin-transition-link",
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -49,6 +45,6 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
-    },
+    }
   ],
-}
+};
