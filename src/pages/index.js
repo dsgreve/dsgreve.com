@@ -1,110 +1,31 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Layout from '../components/Layout';
 import TextIntro from "../components/TextIntro";
-import BrowserDsk from "../assets/Browser__desktop";
-import gsap from "gsap";
+//import BrowserDsk from "../assets/Browser__desktop";
+//import GradientCircle from "../assets/Gradient__circle";
+
 
 // markup
 const IndexPage = ({ transitionStatus }) => {
-  useEffect(() => {
-    gsap.to('.hometex', {
-      autoAlpha: 1,
-      duration: 1,
-    });
-  }, []) //First Time Site is opened;
-
-  useEffect(() =>{
-    if (transitionStatus === 'entering') {
-      gsap.to('.hometex', {
-        autoAlpha: 1,
-        duration: 1, // if entering the page make .hometex visible
-      })
-    }
-
-    if (transitionStatus === 'exiting') {
-      gsap.to('.hometex', {
-        autoAlpha: 0,
-        duration: 1, // if entering the page make .hometex visible
-      })
-    }
-  }, [transitionStatus]);
-
-  let textRefs = useRef([]);
-  const textfly = (textRefs, direction) => {
-    let even = [];
-    let odd = [];
-    textRefs.forEach((idx, i) => {
-      if (i % 2 === 0) {
-        even.push(idx);
-      } else {
-        odd.push(idx);
-      }
-    });
-    if (direction === 1) {
-      gsap.from(even, {
-        duration: 0.5,
-        x: -200 * direction,
-        opacity: 0,
-        delay: 0.05,
-        ease: "power4.inOut",
-        stagger: {
-          amount: 0.2,
-        },
-      });
-
-      gsap.from(odd, {
-        duration: 0.5,
-        x: 200 * direction,
-        opacity: 0,
-        delay: 0.05,
-        ease: "power4.inOut",
-        stagger: {
-          amount: 0.2,
-        },
-      });
-    }
-    if (direction === -1) {
-      gsap.to(even, {
-        duration: 0.5,
-        x: -200 * direction,
-        opacity: 0,
-        delay: 0.05,
-        ease: "power4.inOut",
-        stagger: {
-          amount: 0.2,
-        },
-      });
-
-      gsap.to(odd, {
-        duration: 0.5,
-        x: 200 * direction,
-        opacity: 0,
-        delay: 0.05,
-        ease: "power4.inOut",
-        stagger: {
-          amount: 0.2,
-        },
-      });
-    }
-  };
-
-  useEffect(() => {
-    textfly(textRefs.current, 1);
-  }, []);
-  useEffect(() => {
-    if (transitionStatus === "exiting") {
-      textfly(textRefs.current, -1);
-    }
-  }, [transitionStatus]);
-
   return (
     <Layout>
-      <div className="container mt-20 grid grid-cols-2">
-        <div className="text-8xl uppercase font-bold text-rajah max-w-4xl">
+      <div className="container my-20 flex justify-center">
+        <div className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold text-rajah max-w-3xl">
           <TextIntro />
+          <br />
+          Developer,
+          <br /> Based in
+          <br />
+          Michigan&nbsp;<span className="rotate-12">✋</span>
         </div>
-        <div>
-          <BrowserDsk />
+      </div>
+      <div className="container flex">
+        <div className="md:w-1/2 ml-auto">
+          <p className="text-rajah text-xl">
+            I create websites and apps using modern development techniques that
+            are user friendly and blazing fast. I am usually working with
+            agencies, startups, brands, associations and other freelancers.
+          </p>
         </div>
       </div>
     </Layout>

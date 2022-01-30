@@ -1,74 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useInterval } from 'react-use';
 import styled, { keyframes } from "styled-components";
 
 const TextIntro = () => {
-  const frontEndArray = "Front-End".split("")
+  const textArray = ['Wordpress', 'React', 'Front-end'];
+  const [items, setItems] = useState(textArray[2]);
+  const [count, setCount] = useState(1);
+  const [play, setPlay] = useState(false); // used to stop animation if not on screen.
+
+  useInterval( 
+    () => {
+    setItems(textArray[0]);
+    setCount(count + 1);
+
+    if (count === 1) {
+      setItems(textArray[1]);
+      setCount(count + 1);
+    }
+
+    if (count === 2) {
+      setItems(textArray[2]);
+      setCount(0);
+    }
+
+  }, play ? 4000 : null); // stops animation when not visible
+
+  useEffect(() => {
+    function textArray() {
+      const timer = setTimeout(() => {
+        setItems(textArray[0]);
+        setPlay(true);
+      }, 4000);
+
+      return () => clearTimeout(timer);
+    }
+    textArray();
+  }, []);
 
   return (
-    <>
-      <SingleText>
-        {frontEndArray.map((item, index) => (
-          <span key={index}>{item}</span>
-        ))}{" "}
-      </SingleText>
-      <Wrapper>Developer,<br/> Based in Michigan ✋</Wrapper>
-    </>
+    <Wrapper>
+      <span key={count}>{items}</span>
+    </Wrapper>
   );
 }
 
-const introAnimation = keyframes`
-  0% { opacity: 0; transform: translateY(-100px); filter: blur(10px) }
-  100% { opacity: 1; transform: translateY(0); filter: blur(0) }
+// call keyframes component from styled components
+const animation = keyframes`
+  0% { opacity: 0; transform: translateY(-50px); filter: blur(10px) }
+  25% { opacity: 1; transform: translateY(0); filter: blur(0) }
+  75% { opacity: 1; transform: translateY(0); filter: blur(0) }
+  100% { opacity: 0; filter: blur(10px) }
 `;
-
-const singleAnimation = keyframes`
-  0% { opacity: 0; filter: blur(10px) }
-  100% { opacity: 1; filter: blur(0) }
-`;
-
+// tell wrapper which animation to use.
 const Wrapper = styled.span`
+  animation-name: ${animation};
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
   display: inline-block;
   opacity: 0;
-  animation-name: ${introAnimation};
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-`;
-
-const SingleText = styled.span`
-  display: inline-block;
-  span {
-    opacity: 0;
-    animation-name: ${singleAnimation};
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-  span:nth-child(1) {
-    animation-delay: 1.5s;
-  }
-  span:nth-child(2) {
-    animation-delay: 1.7s;
-  }
-  span:nth-child(3) {
-    animation-delay: 1.9s;
-  }
-  span:nth-child(4) {
-    animation-delay: 2.1s;
-  }
-  span:nth-child(5) {
-    animation-delay: 2.3s;
-  }
-  span:nth-child(6) {
-    animation-delay: 2.5s;
-  }
-  span:nth-child(7) {
-    animation-delay: 2.5s;
-  }
-  span:nth-child(8) {
-    animation-delay: 2.5s;
-  }
-  span:nth-child(9) {
-    animation-delay: 2.5s;
-  }
 `;
 
 export default TextIntro

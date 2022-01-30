@@ -2,7 +2,7 @@ import * as React from "react";
 
 function BrowserDsk(props) {
   return (
-    <div>
+    <div className=" rotate-3">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path fill="#efefef" d="M70.64 0h370.72v494.344H70.64z" />
         <path fill="#2c3e50" d="M70.64 494.344h370.72V512H70.64z" />
