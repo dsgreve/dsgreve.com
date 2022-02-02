@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+//import { Link } from 'gatsby';
 import DsgLogo from '../assets/dsg_logo';
 import TransitionLink from "gatsby-plugin-transition-link";
 import { IoGlassesOutline } from "react-icons/io5";
@@ -9,21 +9,8 @@ import { MdOutlineMarkunreadMailbox } from "react-icons/md";
 
 const Layout =({ pageTitle, children }) => {
   return (
-    <div className="relative h-screen py-2">
-      <div className="gradient__background"></div>
-      <div className="waves">
-        <div className="wave__1"></div>
-        <div className="wave_2">
-          <svg className="absolute">
-            <clipPath id="wave4">
-              <path
-                d="M1289.9 70.5371C1077.1 -11.3558 905.86 45.0023 728.36 66.1005C550.86 87.1986 430.248 25.3857 264.86 6.83957C99.4718 -11.7065 66.483 11.2198 -12.6395 31.0004C-12.6395 118.933 -12.6395 532.869 -12.6395 532.869L1516.96 532.869L1516 6.83949C1516 6.83949 1503.09 152.58 1289.9 70.5371Z"
-                fill="url(#paint0_linear)"
-              ></path>
-            </clipPath>
-          </svg>
-        </div>
-      </div>
+    <div className="">
+      <div className="gradient-background gradient-background__1"></div>
       <title>{pageTitle}</title>
       <div className="header__wrapper container flex pt-6 items-center justify-between">
         <div className="w-14">
@@ -68,6 +55,9 @@ const Layout =({ pageTitle, children }) => {
         <h1>{pageTitle}</h1>
         {children}
       </main>
+      <footer className="bg-slate-900 py-2 text-center">
+        <p className="text-white">Copyright {new Date().getUTCFullYear()} | Dale Greve</p>
+      </footer>
     </div>
   );
 }

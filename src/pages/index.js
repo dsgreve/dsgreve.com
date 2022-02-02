@@ -19,12 +19,13 @@ const IndexPage = ({ transitionStatus }) => {
           Michigan&nbsp;<span className="rotate-12">✋</span>
         </div>
       </div>
+
       <div className="container flex">
         <div className="md:w-1/2 ml-auto">
           <p className="text-rajah text-xl">
-            I create websites and apps using modern development techniques that
-            are user friendly and blazing fast. I am usually working with
-            agencies, startups, brands, associations and other freelancers.
+            Creating websites that fit the unique style & message to best reach
+            your audience. Helping start-ups, small businesses, and agencies
+            achieve high quality websites and exceptional user experience.
           </p>
         </div>
       </div>
