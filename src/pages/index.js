@@ -1,9 +1,6 @@
 import React from "react";
 import Layout from '../components/Layout';
 import TextIntro from "../components/TextIntro";
-//import BrowserDsk from "../assets/Browser__desktop";
-//import GradientCircle from "../assets/Gradient__circle";
-
 
 // markup
 const IndexPage = ({ transitionStatus }) => {
@@ -16,7 +13,7 @@ const IndexPage = ({ transitionStatus }) => {
           Developer,
           <br /> Based in
           <br />
-          Michigan&nbsp;<span className="rotate-12">✋</span>
+          Michigan
         </div>
       </div>
 

@@ -1,0 +1,169 @@
+.scrolled__down {
+  .animateLogo {
+    transition: transform .5s ease;
+    transition-delay: .5s;
+    //transform: scale(0); 
+
+    .siteLogo {
+        &__rollout {
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+          animation-name: rollOut;
+        }
+        
+
+        &__s {
+          animation-fill-mode: forwards;
+          animation-name: slideS;
+          animation-duration: .3s;
+          animation-delay: .3s;
+          transition-timing-function: ease;
+        }
+
+        &__g {
+          animation-fill-mode: forwards;
+          animation-name: slideG;
+          animation-duration: .3s;
+          animation-delay: .4s;
+          transition-timing-function: ease;
+        }
+
+        &__bracket-close {
+          animation-fill-mode: forwards;
+          animation-name: slideBracket;
+          animation-duration: .3s;
+          animation-delay: .4s;
+          transition-timing-function: ease;
+        }
+    }
+  }
+}
+
+.scrolled__up {
+  .animateLogo {
+    transition: transform .5s ease;
+    transition-delay: .5s;
+    
+
+    .siteLogo {
+        &__rollout {
+          animation-duration: 1s;
+          animation-fill-mode: backwards;
+          animation-name: rollIn;
+        }
+        
+
+        &__s {
+          animation-fill-mode: backwards;
+          animation-name: slideSin;
+          animation-duration: .3s;
+          animation-delay: .3s;
+          transition-timing-function: ease;
+        }
+
+        &__g {
+          animation-fill-mode: backwards;
+          animation-name: slideGin;
+          animation-duration: .3s;
+          animation-delay: .4s;
+          transition-timing-function: ease;
+        }
+
+        &__bracket-close {
+          animation-fill-mode: backwards;
+          animation-name: slideBracketBack;
+          animation-duration: .3s;
+          animation-delay: .4s;
+          transition-timing-function: ease;
+        }
+    }
+  }
+}
+
+
+
+@keyframes rollOut {
+  from {
+    opacity: 100%;
+    transform: skew(0deg, 0deg) translateY(0);
+    
+  }
+
+  to {
+    opacity: 0%;
+    transform: skew(0deg, 80deg) translateY(-10px);
+  }
+}
+
+@keyframes rollIn {
+  from {
+    opacity: 0%;
+    transform: skew(0deg, 80deg) translateY(-10px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: skew(0deg, 0deg) translateY(0);
+  }
+}
+
+@keyframes slideS {
+  from {
+    transform: translateX(0);
+
+  }
+
+  to {
+    transform: translateX(-22%);
+  }
+}
+
+@keyframes slideG {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-24%);
+  }
+}
+
+@keyframes slideBracket {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-53%);
+  }
+}
+
+@keyframes slideSin {
+  from {
+    transform: translateX(-22%)
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideGin {
+  from {
+    transform: translateX(-24%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideBracketBack {
+  from {
+    transform: translateX(-53%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}

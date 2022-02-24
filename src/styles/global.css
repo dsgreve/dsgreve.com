@@ -1,4 +1,11 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "./components/_logo.css";
 @import "./components/_backgrounds.css";
+
+nav {
+  transition: transform 1s ease-in-out;
+}
+.scrolled__down nav {transform: translateY(-150px)}
+.scrolled__up nav {transform: translateY(0)}
