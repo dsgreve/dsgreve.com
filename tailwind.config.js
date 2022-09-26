@@ -1,9 +1,10 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    container: {
+    container: (theme) => ({
       center: true,
-    },
+      padding: theme("spacing.4"),
+    }),
     extend: {
       colors: {
         "russian-violet": "#300350",

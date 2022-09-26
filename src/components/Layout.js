@@ -34,7 +34,7 @@ const Layout =({ pageTitle, children }) => {
   });
 
   return (
-    <div className="">
+    <div className="pt-14">
       <div className="gradient-background gradient-background__1"></div>
       <title>{pageTitle}</title>
       <Header />
