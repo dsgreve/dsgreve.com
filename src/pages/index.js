@@ -22,7 +22,7 @@ const IndexPage = ({ transitionStatus }) => {
           
           <p className="text-rajah text-xl">
             Creating websites that fit the unique style & message to best reach
-            your audience. Helping start-ups, small businesses, and agencies
+            your audience. Helping start ups, small businesses, and agencies
             achieve high quality websites and exceptional user experience.
           </p>
         </div>
