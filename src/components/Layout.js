@@ -1,38 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react';
-//import { Link } from 'gatsby';
-//import DsgLogo from '../assets/dsg_logo';
+import React from 'react';
 import Header from './Header';
-import snowboard from "../images/220205-julia-marino-cc-0930p-eb95d8.webp";
 
-
-const useElementOnScreen = (options) => {
-  const containerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const callbackFunction = (entries) => {
-    const [entry] = entries;
-    setIsVisible(entry.isIntersecting);
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(callbackFunction, options);
-    if (containerRef.current) observer.observe(containerRef.current);
-
-    return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
-    };
-  }, [containerRef, options]);
-
-  return [containerRef, isVisible];
-};
 const Layout =({ pageTitle, children }) => {
-
-  const [containerRef, isVisible] = useElementOnScreen({
-    root: null,
-    rootMargin: "0px",
-    threshold: 1.0,
-  });
-
   return (
     <div className="pt-14">
       <div className="gradient-background gradient-background__1"></div>
