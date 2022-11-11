@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from '../components/Layout';
-import TextIntro from "../components/TextIntro";
+//import TextIntro from "../components/TextIntro";
 import LatestBlogPosts from "../components/LatestBlogPosts";
 
 // markup
@@ -9,7 +9,7 @@ const IndexPage = ({ transitionStatus }) => {
     <Layout>
       <div className="container my-20 flex justify-center">
         <div className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold text-rajah max-w-3xl">
-          <TextIntro />
+          <span>Front-end</span>
           <br />
           Developer.
           <br />Creativity<br />
