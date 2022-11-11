@@ -48,7 +48,7 @@ const Layout =({ pageTitle, children }) => {
       </main>
       <footer className="bg-slate-900 py-2 text-center">
         <p className="text-white">
-          Copyright {new Date().getUTCFullYear()} | Dale Greve
+          Copyright {new Date().getUTCFullYear()} | Dale S Greve
         </p>
       </footer>
     </div>
