@@ -47,11 +47,7 @@ const Header = () => {
 
   return (
     <header
-      className={` header-global z-10 fixed top-0 flex justify-between ${
-        window.pageYOffset !== 0 && scrollDir === "scrolling down"
-          ? "scrolled__down"
-          : "scrolled__up"
-      }`}
+      className={` header-global z-10 fixed top-0 flex justify-between`}
     >
       <LogoComponent />
 
