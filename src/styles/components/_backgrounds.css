@@ -10,44 +10,6 @@ main {
     height: 100%;
     
     &__1 {
-      background-image: linear-gradient(130deg, #300350 30%, #153cb4);
+      background-image: linear-gradient(80deg, rgb(17, 8, 31) 30%, rgb(17, 4, 60));
     }
-}
-
-.wave {
-  &__1 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-
-    svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 87px;
-      transform: rotateY(180deg);
-    }
-
-    .shape-fill {
-      fill: #9013FE;
-    }
-  }
-
-  &__demo {
-    position: absolute;
-    width: 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: -1;
-    top: 300px;
-    opacity: .25;
-    background-image: url("../assets/wave-1.svg");
-    height: 100vh;
-    mix-blend-mode: overlay;
-  }
 }

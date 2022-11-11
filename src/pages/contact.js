@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Layout from "../components/Layout";
-import gsap from "gsap";
 
 const Contact = ({ transitionStatus }) => {
   useEffect(() => {

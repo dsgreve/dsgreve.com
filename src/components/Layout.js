@@ -45,9 +45,6 @@ const Layout =({ pageTitle, children }) => {
           {isVisible ? "IN VIEWPORT" : "NOT IN VIEWPORT"}
         </div> */}
         <div className="h-screen"></div>
-        <div className="box" ref={containerRef}>
-          <img src={snowboard} alt="snowboarder" />
-        </div>
       </main>
       <footer className="bg-slate-900 py-2 text-center">
         <p className="text-white">
