@@ -31,3 +31,11 @@ h1 {
   width: 100%;
   z-index: 10;
 }
+
+.image-bounce {
+  transition: all .5s ease-out;
+}
+
+.image-bounce:hover {
+  transform: scale(0.75) translate(-30%, 50%) skew(10deg, 10deg);
+}
