@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        "main-text": "var(--text-main)",
+        "secondary-text": "var(--text-secondary)",
+      },
       height: {
         "10v": "10vh",
         "20v": "20vh",

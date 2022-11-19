@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { mainNavItem } from "./nav.module.css";
-
+//Context
 const MainNav = () => {
   return (
     <nav className="main-nav w-full hidden">
