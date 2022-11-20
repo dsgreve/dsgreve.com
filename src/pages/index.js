@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Dale Greve">
-      <h2 className="text-3xl first-line:mb-6">Creativity Through Code</h2>
+      <h2 className="text-3xl mb-6">Creativity Through Code</h2>
       <StaticImage
         className="border-4 rounded-2xl image-bounce"
         alt="Example code"

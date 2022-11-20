@@ -5,14 +5,16 @@ const AboutPage = () => {
   return (
     <main>
       <Layout pageTitle="About Me">
-        <p>Hi There! This page was build with gatsby.</p>
+        <p>
+          Front-end Developer buidling exceptional user experiences.
+        </p>
       </Layout>
     </main>
   );
 };
 export const Head = () => (
   <>
-    <title>About DSG | Web Artisans</title>
+    <title>About DSG | Web Artisan</title>
     <meta name="description" content="Your description" />
   </>
 );

@@ -1,9 +1,16 @@
 .main-nav-item {
   font-size: 1.45rem;
-  color: white;
   transition: color .5s ease-out;
 }
 
 .main-nav-item:hover {
   color: #f8d007;
 }
+.theme-dark .main-nav-item {
+  color: white;
+}
+
+.theme-light .main-nav-item {
+  color: black;
+}
+
