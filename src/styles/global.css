@@ -191,3 +191,35 @@
 .image-bounce:hover {
   transform: scale(0.75) translate(-30%, 50%) skew(10deg, 10deg);
 }
+
+.introDecor {
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes introDiagonalIn {
+  0% {
+    transform:  translateY(-60%) translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-80px) translateX(30%);
+    opacity: .5;
+  }
+}
+
+.introDiagonalGroup1 {
+  
+  width: 650px;
+  height: 650px;
+  overflow: hidden;
+  animation: introDiagonalIn 2.25s forwards;
+}
+
+.introDiagonal {
+  border-bottom: 1px solid rgb(178, 190, 181);
+  width: 45%;
+  transform: rotate(45deg);
+  transform-origin: left;
+  margin-bottom: 20px;
+}

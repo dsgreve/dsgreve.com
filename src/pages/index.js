@@ -4,13 +4,25 @@ import { StaticImage } from "gatsby-plugin-image";
 // Step 2: Define your component
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Dale Greve">
-      <h2 className="text-3xl mb-6">Creativity Through Code</h2>
-      <StaticImage
-        className="border-4 rounded-2xl image-bounce"
-        alt="Example code"
-        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=280&q=80"
-      />
+    <Layout>
+      <div class="introDecor introDiagonalGroup1">
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+        <div class="introDiagonal"></div>
+      </div>
+      <h2 className="text-3xl mb-6">Hey There!</h2>
+      <h1 className="text-6xl  mb-6">I'm Dale</h1>
+      <p className="text-2xl">
+        I create Websites that are fast loading, accessible, and easy to use.
+      </p>
     </Layout>
   );
 };

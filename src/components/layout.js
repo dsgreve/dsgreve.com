@@ -22,7 +22,6 @@ const Layout = ({pageTitle, children}) => {
       <MainNav />
       <div className={container}>
         <main>
-          <h1 className="text-6xl">{pageTitle}</h1>
           {children}
         </main>
       </div>
