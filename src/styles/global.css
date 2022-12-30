@@ -208,8 +208,18 @@
   }
 }
 
+@keyframes introTriangleIn {
+0% {
+    transform:  translateY(-60%) translateX(0) rotate(-65deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(30px) translateX(-110px) rotate(18deg);
+    opacity: .5;
+  }
+}
+
 .introDiagonalGroup1 {
-  
   width: 650px;
   height: 650px;
   overflow: hidden;
@@ -222,4 +232,17 @@
   transform: rotate(45deg);
   transform-origin: left;
   margin-bottom: 20px;
+}
+
+.svg-triangle{
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  animation: introTriangleIn 2.25s forwards;
+}
+
+.svg-triangle polygon {
+  stroke: rgb(178, 190, 181);
+  fill: transparent;
+  stroke-width:2;
 }

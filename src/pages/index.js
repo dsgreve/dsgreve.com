@@ -1,10 +1,13 @@
 import * as React from "react";
 import Layout from "../components/layout";
-import { StaticImage } from "gatsby-plugin-image";
+// import { StaticImage } from "gatsby-plugin-image";
 // Step 2: Define your component
 const IndexPage = () => {
   return (
     <Layout>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svg-triangle">
+        <polygon points="0,0 100,0 50,100" />
+      </svg>
       <div class="introDecor introDiagonalGroup1">
         <div class="introDiagonal"></div>
         <div class="introDiagonal"></div>
